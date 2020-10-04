@@ -1,8 +1,5 @@
 package es.upm.miw.iwvg_devops;
 
-import java.util.List;
-import java.util.stream.Collector;
-
 public class Fraction {
 
     private int numerator;
