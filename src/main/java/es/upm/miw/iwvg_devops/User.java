@@ -52,7 +52,7 @@ public class User {
         this.fractions = fractions;
     }
 
-    public void addFraction(Fraction fraction) {
+    public void add(Fraction fraction) {
         this.fractions.add(fraction);
     }
 

@@ -13,6 +13,13 @@ public class Searches {
                         .anyMatch(fraction -> properFraction.equals(fraction.isProper(fraction.getNumerator(),fraction.getDenominator()))))
                 .map(User::getFamilyName);
     }
+    //e
+    public Fraction findFractionAdditionByUserId(String id) {
+        return (Fraction) new UsersDatabase().findAll()
+                .filter(user -> id.equals(user.getId()))
+                .flatMap(user -> user.getFractions().stream());
+                //.map(Fraction::add);
+    }
 
 
 }
