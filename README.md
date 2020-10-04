@@ -6,6 +6,7 @@
 [![Build Status](https://travis-ci.org/Patricia403/iwvg-devops-zhengrong-wang.svg?branch=develop)](https://travis-ci.org/Patricia403/iwvg-devops-zhengrong-wang)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-zhengrong-wang&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-zhengrong-wang)
 [![BCH compliance](https://bettercodehub.com/edge/badge/Patricia403/iwvg-devops-zhengrong-wang?branch=develop)](https://bettercodehub.com/)
+[![Heroku broken](https://iwvg-devops-zhengrong-wang.herokuapp.com/system/version-badge)](https://iwvg-devops-zhengrong-wang.herokuapp.com/swagger-ui.html)
 
 ### :gear: Instalación del proyecto
 1. Clonar el repositorio en tu equipo, **mediante consola**:
