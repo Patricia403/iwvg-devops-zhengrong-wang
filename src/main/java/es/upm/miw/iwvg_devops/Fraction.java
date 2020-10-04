@@ -1,5 +1,7 @@
 package es.upm.miw.iwvg_devops;
 
+import java.util.Scanner;
+
 /**
  * Conceptos: Las fracciones propias son aquellas cuyo numerador es menor que el denominador
  * <p>
@@ -37,7 +39,7 @@ public class Fraction {
 
     public Fraction() {
         this(1, 1);
-    }
+        }
 
     public int getNumerator() {
         return numerator;
@@ -55,9 +57,7 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public double decimal() {
-        return (double) numerator / denominator;
-    }
+    public double decimal() {return (double) numerator / denominator;}
 
     @Override
     public String toString() {
@@ -67,5 +67,37 @@ public class Fraction {
                 '}';
     }
 
+    public boolean isProper(int numerator, int denominator) {
+        return  numerator > denominator;
+    }
+
+    public boolean isImproper(int numerator, int denominator) {
+        return  numerator < denominator;
+    }
+
+    public boolean isEquivalent(int numerator,int denominator) {
+        return numerator == denominator;
+    }
+
+    public Fraction add(Fraction fraction){
+        int newNumerator = numerator * fraction.getDenominator() + denominator * fraction.getNumerator();
+        int newDenominator = denominator * fraction.getDenominator();
+        Fraction newFraction = new Fraction(newNumerator,newDenominator);
+        return newFraction;
+    }
+
+    public Fraction multiply(Fraction fraction){
+        int newNumerator = numerator * fraction.getNumerator();
+        int newDenominator = denominator * fraction.getDenominator();
+        Fraction newFraction = new Fraction(newNumerator,newDenominator);
+        return newFraction;
+    }
+
+    public Fraction divide(Fraction fraction){
+        int newNumerator = numerator * fraction.getDenominator();
+        int newDenominator = denominator * fraction.getNumerator();
+        Fraction newFraction = new Fraction(newNumerator,newDenominator);
+        return newFraction;
+    }
 
 }
