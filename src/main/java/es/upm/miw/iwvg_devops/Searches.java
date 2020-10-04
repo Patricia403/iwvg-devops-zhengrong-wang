@@ -31,4 +31,13 @@ public class Searches {
                 .distinct();
     }
 
+    //8
+    public Stream<String> findUserFamilyNameBySomeImproperFraction(String improperFraction) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(fraction -> improperFraction.equals(fraction.isImproper(fraction.getNumerator(),fraction.getDenominator()))))
+                .map(User::getFamilyName);
+    }
+
+
 }
