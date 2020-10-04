@@ -23,7 +23,7 @@ public class SearchesTest {
     @Test
     void testFindFractionAddByUserId() {
         assertEquals(List.of(2, 4, 2, 4), new Searches().findFractionAdditionByUserId("Paula")
-                .getClass());
+                .collect(Collectors.toList()));
     }
 
     //b
