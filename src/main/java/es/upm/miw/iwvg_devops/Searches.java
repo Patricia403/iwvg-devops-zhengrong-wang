@@ -13,6 +13,7 @@ public class Searches {
                         .anyMatch(fraction -> properFraction.equals(fraction.isProper(fraction.getNumerator(),fraction.getDenominator()))))
                 .map(User::getFamilyName);
     }
+
     //e
     public Fraction findFractionAdditionByUserId(String id) {
         return (Fraction) new UsersDatabase().findAll()
@@ -21,5 +22,13 @@ public class Searches {
                 //.map(Fraction::add);
     }
 
+    //b
+    public Stream<String> findUserFamilyNameByAllNegativeSignFractionDistinct(String negativeSignFraction) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(fraction -> negativeSignFraction.equals(fraction.isNegativeSign(fraction.decimal))))
+                .map(User::getFamilyName)
+                .distinct();
+    }
 
 }
